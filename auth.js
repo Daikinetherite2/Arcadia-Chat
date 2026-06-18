@@ -7,7 +7,10 @@ const provider = new GoogleAuthProvider();
 
 export function login() {
   signInWithPopup(auth, provider)
-    .then(res => {
-      console.log(res.user);
+    .then((res) => {
+      console.log("LOGIN SUCCESS", res.user);
+    })
+    .catch((err) => {
+      console.log("LOGIN ERROR", err);
     });
 }
