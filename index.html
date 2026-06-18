@@ -2,34 +2,43 @@
 <html>
 <head>
   <title>Chat App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h2>Firebase Chat</h2>
+<div class="app">
 
-  <button onclick="login()">Login Google</button>
-
-  <div id="user"></div>
-
-  <script type="module" src="./app.js"></script>
-
-</body>
-</html>
-
-<div class="container">
-
+  <!-- SIDEBAR -->
   <div class="sidebar">
-    <h3>Friends</h3>
-    <div id="friends"></div>
+
+    <div class="sidebar-header">
+      <button onclick="login()">Login</button>
+      <h3>Friends</h3>
+    </div>
+
+    <div id="friends" class="friends-list"></div>
+
   </div>
 
+  <!-- CHAT AREA -->
   <div class="chat">
-    <div class="messages" id="messages"></div>
 
-    <div class="input">
-      <input id="msg" />
+    <div class="chat-header">
+      <span id="chatName">Select friend</span>
+    </div>
+
+    <div id="messages" class="messages"></div>
+
+    <div class="chat-input">
+      <input id="msg" placeholder="Type a message...">
       <button onclick="send()">Send</button>
     </div>
+
   </div>
 
 </div>
+
+<script type="module" src="./app.js"></script>
+
+</body>
+</html>
